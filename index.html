@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshop Wizard Card Draw</title>
+  <meta name="description" content="Draw a random Workshops & Wizards facilitation card for an icebreaker or workshop prompt." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">Workshops & Wizards</div>
+      <h1 id="page-title">Draw a Facilitation Card</h1>
+      <p class="lede">Use this as a lightweight icebreaker: draw a magical item, reflect on the skill, and share how it might help the group.</p>
+    </section>
+
+    <section class="controls" aria-label="Card draw controls">
+      <button id="draw-card" class="primary-button" type="button">Draw a card</button>
+      <button id="keep-card" class="secondary-button" type="button" aria-pressed="false">Keep my card on refresh</button>
+      <label class="filter-label" for="level-filter">
+        Level
+        <select id="level-filter">
+          <option value="all">All levels</option>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="card-stage" aria-live="polite">
+      <div class="image-frame">
+        <img id="card-image" src="" alt="" />
+      </div>
+      <article class="card-details">
+        <div id="card-level" class="level-pill">Level</div>
+        <h2 id="card-title">Loading card...</h2>
+        <p id="card-description"></p>
+        <div class="prompt-box">
+          <h3>Icebreaker prompt</h3>
+          <p>Where have you seen this skill show up in a group setting, and how could it help today?</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        Based on the Workshops & Wizards deck by James Smart. Testing and development by Deborah Rim Moiso. Visual design and illustrations by Laura Vidal.
+      </p>
+      <p>
+        This digitized version is intended for non-commercial facilitation use and should preserve attribution and compatible sharing consistent with CC BY-NC-SA 4.0.
+      </p>
+    </footer>
+  </main>
+
+  <noscript>This page requires JavaScript to draw a random card.</noscript>
+  <script src="script.js"></script>
+</body>
+</html>
